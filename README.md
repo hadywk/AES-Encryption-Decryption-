@@ -1,1 +1,1 @@
-# AES-Encryption-Decryption-
+This code will create a GUI with two input fields (one for the key and one for the message) and two buttons (one for encryption and one for decryption). When the user enters a key and message and clicks the "Encrypt" button, the program will encrypt the message using AES with the specified key and 10 rounds of encryption. When the user clicks the "Decrypt" button, the program will decrypt the message using the same key.
