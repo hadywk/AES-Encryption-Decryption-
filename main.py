@@ -50,3 +50,30 @@ def encrypt():
     # Update the message input field with the encrypted message
     message_entry.delete(0, 'end')
     message_entry.insert(0, encrypted_message)
+
+    
+    # Create a function to perform decryption
+def decrypt():
+    # Get the key and message from the input fields
+    key = key_entry.get()
+    message = message_entry.get()
+
+    # Convert the key to bytes
+    key = key.encode()
+
+    # Decode the message from a base64 string
+    message = base64.b64decode(message)
+
+    # Create the AES cipher object
+    cipher = AES.new(key, AES.MODE_ECB)
+
+    # Decrypt the message 10 times
+    for i in range(10):
+        message = cipher.decrypt(message)
+
+    # Convert the decrypted message to a string
+    decrypted_message = message.decode().strip()
+
+    # Update the message input field with the decrypted message
+    message_entry.delete(0, 'end')
+    message_entry.insert(0, decrypted_message)
