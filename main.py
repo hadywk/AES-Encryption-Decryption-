@@ -77,3 +77,15 @@ def decrypt():
     # Update the message input field with the decrypted message
     message_entry.delete(0, 'end')
     message_entry.insert(0, decrypted_message)
+
+    # Create
+# Create an "Encrypt" button
+encrypt_button = Button(window, text="Encrypt", command=encrypt)
+encrypt_button.grid(row=2, column=0)
+
+# Create a "Decrypt" button
+decrypt_button = Button(window, text="Decrypt", command=decrypt)
+decrypt_button.grid(row=2, column=1)
+
+# Run the main loop
+window.mainloop()
